@@ -41,7 +41,7 @@ export default function Home() {
   );
 
   const handleDeleteTask = async (taskId: string) => {
-    console.log(taskId);
+    
     await deletedMutation.mutateAsync(taskId);
   };
 

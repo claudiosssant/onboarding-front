@@ -20,10 +20,9 @@ export function Modal({ isOpen, setIsOpen, onTaskAdded }: ModalProps) {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  console.log(name, description);
 
     const queryClient = useQueryClient();
-    
+
     const addMutation = useMutation(
     async () => {
       try {
@@ -34,7 +33,6 @@ export function Modal({ isOpen, setIsOpen, onTaskAdded }: ModalProps) {
           createdAt: new Date(),
           updatedAt: new Date()
         });
-        console.log("Tarefa cadastrada com sucesso");
       } 
       
       catch (error) {
